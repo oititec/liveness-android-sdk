@@ -1,89 +1,73 @@
-# Documentoscopia - Guia de implementação de view customizada
+# Documentoscopia 
+Saiba como implementar a customização de view (telas), conforme a sua necessidade.
 
-Além de poder usar o SDK em sua forma padrão de exibição, o SDK permite que a forma de visualização seja completamente customizada.
+Você pode utilizar o SDK padrão e por meio dele, também customizar a visualização dessas telas.
 
-## Entendendo o funcionamento
+## Entenda como funciona
 
-O componente de Documentoscopia é dividido em três telas:
+O **componente** de Documentoscopia **é dividido em treze telas**:
 
-1. Tela inicial, onde o usuário deve escolhar se irá capturar apenas uma foto (com frente e verso) ou duas fotos (uma da frente e outra do verso)
-2. Tela de captura das imagens, onde o usuário irá fotografar o documento.
-3. Tela de confirmação, onde o usuário poderá confirmar se as fotos estão boas, e em caso negativo, poderá capturá-las novamente.
+### 1. Tela inicial
+O usuário define qual o tipo de documento que deseja enviar:
 
-De forma semelhante ao Liveness, a customização do visual é feita através da implementação dos layouts (XMLs), os quais devem obrigatoriamente conter alguns elementos visuais com IDs pré-determinados, para o correto funcionamento do processo de documentoscopia. A diferença é que, neste caso, deve-se implementar 3 layouts, sendo um para cada tela citada anteriormente.
+<div><img src="Images/01_tipo_de_documento.png" width="214" height="488"></div>
 
-#### 1. Tela inicial
+### 2. Tela de captura do documento (frente)
+O usuário recebe a instrução de captura da frente do documento, dentro da marcação apresentada:
 
-Para a tela inicial, deve-se passar o xml do layout através do parâmetro `DocumentscopyActivity.PARAM_CUSTOM_HOME_FRAGMENT`.
+<div><img src="Images/02_instrucao_documento_frente.png" width="214" height="488"></div>
 
-O layout fornecido deve conter as seguintes views:
+### 3. Abaixo, um exemplo de como esse documento deve ficar posicionado
 
-|Classe|id|Obrigatória|Descrição|
-|------|--|-----------|---------|
-|View|activityIndicatorView|Sim|View que será exibida em momentos de carregamento e validação.|
-|View|onePictureButton|Sim|View clicável para usuário selecionar opção de apenas uma foto.|
-|View|twoPicturesButton|Sim|View clicável para usuário selecionar opção de duas fotos.|
-|View|contentView|Sim|ViewGroup que deve englobar todas as outras views, com exceção de activityIndicatorView.|
+<div><img src="Images/03_documento_frente.png" width="214" height="488"></div>
 
-Na figura abaixo é possível visualizar o que cada uma das subviews representa na tela:
+### 4. Tela de confirmação da captura do documento (frente)
+Nesta tela, o usuário deve confirmar se a imagem do documento capturado está em boa qualidade, clicando em Não, refazer ou Sim:
 
-![Componentes da view customizada](Images/doc_custom_home_view.png)
+<div><img src="Images/04_documento_frente_validacao.png" width="214" height="488"></div>
 
-#### 2. Tela de captura
+### 5. Tela de captura do documento (verso)
+O usuário recebe a instrução de captura do verso do documento, dentro da marcação apresentada:
 
-Para a tela de captura, deve-se passar o xml do layout através do parâmetro `DocumentscopyActivity.PARAM_CUSTOM_CAMERA_FRAGMENT`.
+<div><img src="Images/05_instrucao_documento_verso.png" width="214" height="488"></div>
 
-O layout fornecido deve conter as seguintes views:
+### 6. Abaixo, um exemplo de como esse documento deve ficar posicionado
 
-|Classe|id|Obrigatória|Descrição|
-|------|--|-----------|---------|
-|TextView|instructionsTextView|Sim|Texto informativo com orientação da captura, é exibido por apenas alguns segundos.|
-|FrameLayout|cameraFrameLayout|Sim|Nesta view será colocado o preview da câmera.|
-|View|captureButton|Sim|Botão para capturar foto.|
-|View|activityIndicatorView|Sim|View que será exibida após o clique para capturar a imagem, enquanto a câmera processa.|
-|ViewGroup|previewContainer|Sim|ViewGroup que será exibido após a captura de uma imagem.|
-|ImageView|previewImageView|Sim|ImageView onde será exibida a imagem capturada para o usuário confirmar se ficou boa.|
-|View|usePictureButton|Sim|Botão para que o usuário confirme a foto capturada.|
-|View|takeNewPictureButton|Sim|Botão para que o usuário capture a foto novamente.|
-|ViewGroup|rotateDeviceContainer|Sim|ViewGroup exibido quando o celular não estiver na orientação correta*.|
-|ImageView|rotateDeviceImageView|Não|Esta ImageView conterá uma animação de rotação.|
+<div><img src="Images/06_documento_verso.png" width="214" height="488"></div>
 
-\* Na opção de foto única, o aparelho precisa estar na posição vertical/retrato para a captura das imagens, e, na opção de duas fotos, deverá estar na posição horizontal/paisagem. Caso o aparelho esteja na orientação errada, a view `rotateDeviceContainer` será exibida, orientando o usuário a rotacionar o aparelho.
+### 7. Tela de confirmação da captura do documento (verso)
+Nesta tela, o usuário deve confirmar se a imagem do documento capturado está em boa qualidade, clicando em Não, refazer ou Sim:
 
-Na figura abaixo é possível visualizar o que cada uma das subviews representa na tela:
+<div><img src="Images/07_documento_verso_validacao.png" width="214" height="488"></div>
 
-![Componentes da view customizada](Images/doc_custom_camera_view.png)
+### 8. Tela de processamento do envio do documento
+A próxima tela que o usuário deve ver é a tela de processamento do envio do documento:
 
-Para esta tela também é possível especificar os textos que serão exibidos no `instructionsTextView`. Para isto, utilize os seguintes parâmetros: `DocumentscopyActivity.PARAM_CUSTOM_CAM_INSTRUCTION_SINGLE`, `DocumentscopyActivity.PARAM_CUSTOM_CAM_INSTRUCTION_FRONT` e `DocumentscopyActivity.PARAM_CUSTOM_CAM_INSTRUCTION_BACK`.
+<div><img src="Images/08_envio_de_documento_loading.png" width="214" height="488"></div>
 
-#### 3. Tela de confirmação
+### 9. Tela de conclusão do envio do documento (sucesso)
+O usuário receberá uma notificação de **sucesso** caso o envio do documento seja concluído com sucesso:
 
-Para a tela de confirmação, deve-se passar o xml do layout através do parâmetro `DocumentscopyActivity.PARAM_CUSTOM_CONFIRMATION_FRAGMENT`.
+<div><img src="Images/09_envio_de_documento_sucesso.png" width="214" height="488"></div>
 
-O layout fornecido deve conter as seguintes views:
+### 10. Tela de processamento do documento (erro)
+O usuário receberá uma notificação de erro ao processar o documento:
 
-|Classe|id|Obrigatória|Descrição|
-|------|--|-----------|---------|
-|ImageView|pictureOneImageView|Sim|ImageView para exibir a frente do documento, ou o documento completo, caso tenha sido escolhida a opção de foto única.|
-|View|changePictureOneButton|Sim|Botão para trocar a imagem da frente do documento, ou o documento completo, caso tenha sido escolhida a opção de foto única.|
-|ViewGroup|pictureTwoContainer|Sim|Container para exibir o verso do documento*.|
-|ImageView|pictureTwoImageView|Sim|ImageView para exibir o verso do documento.|
-|View|changePictureTwoButton|Sim|Botão para trocar a imagem do verso do documento.|
-|View|sendButton|Sim|Botão para realizar o envio do documento.|
-|View|activityIndicatorView|Sim|View que será exibida após clicar no sendButton, enquanto a requisição é feita.|
+<div><img src="Images/13_envio_de_documento_erro.png" width="214" height="488"></div>
 
-\* Caso tenha sido escolhida a opção de foto única, a view `pictureTwoContainer` terá sua visibilidade como GONE.
+### 11. Tela para tentar processar o documento novamente (erro)
+Nesta tela o usuário poderá clicar no botão **Tentar novamente**, após a mensagem de erro:
 
-Na figura abaixo é possível visualizar o que cada uma das subviews representa na tela:
+<div><img src="Images/10_envio_de_documento_erro.png" width="214" height="488"></div>
 
-![Componentes da view customizada](Images/doc_custom_confirmation_view.png)
+### 12. Tela com mensagem do Android para  direcionar o usuário a tela de configuração
 
-# Observações
+**Obs.:** Por padrão, o Android apresenta essa mensagem de configuração apenas uma vez. As próximas vezes o usuário terá que ir até a tela de configurações para dar permissão para a câmera manualmente.
 
-Caso os fragments não estejam em conformidade com as especificações, será retornado erro (`INVALID_CUSTOM_HOME_FRAGMENT`|`INVALID_CUSTOM_CAMERA_FRAGMENT`|`INVALID_CUSTOM_CONFIRMATION_FRAGMENT` ) no `onActivityResult` (através da chave `DocumentscopyActivity.PARAM_RESULT_ERROR`). Para saber mais detalhes sobre a causa do erro, é possível verificar o valor retornado em `DocumentscopyActivity.PARAM_RESULT_ERROR`.
+### 14. Tela de instrução para habilitar câmera:
+Caso a solicitação seja recusada pelo usuário, neste passo é apresentado a mensagem para direciona-lo às configurações:
 
-As subviews podem ser de classes que extendam as classes descritas nas tabela acimas. Por exemplo, sendButton pode ser da classe Button.
+---
 
-Além das subviews especificadas, as views customizadas pode conter outros elementos, apenas tomando cuidado para que os mesmos não interfiram nas subviews funcionais.
+## Instalação e configuração das telas customizáveis
 
-No projeto Sample, neste mesmo repositório, encontra-se um exemplo de implementação. Recomenda-se usar como ponto de partida os layouts inclusos neste sample, modificando-os de acordo com a necessidade.
