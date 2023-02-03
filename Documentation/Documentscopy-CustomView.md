@@ -61,11 +61,16 @@ Nesta tela o usuário poderá clicar no botão **Tentar novamente**, após a men
 <div><img src="Images/10_envio_de_documento_erro.png" width="214" height="488"></div>
 
 ### 12. Tela com mensagem do Android para  direcionar o usuário a tela de configuração
+Ao clicar no botão **Verificar** do passo anterior, o dispositivo apresenta uma mensagem na tela para direcionar ou não o usuário para a tela de configuração:
+
+<div><img src="Images/11_mensagem_de_config_camera.png" width="214" height="488"></div>
 
 **Obs.:** Por padrão, o Android apresenta essa mensagem de configuração apenas uma vez. As próximas vezes o usuário terá que ir até a tela de configurações para dar permissão para a câmera manualmente.
 
 ### 14. Tela de instrução para habilitar câmera:
 Caso a solicitação seja recusada pelo usuário, neste passo é apresentado a mensagem para direciona-lo às configurações:
+
+<div><img src="Images/12_permissao_de_camera_desativada.png" width="214" height="488"></div>
 
 ---
 
@@ -94,21 +99,12 @@ private var rgPictureButton: View? = null
 
 | **Indice** | **Elemento** | **Descrição** |
 |:-----------|:-------------|:--------------|
-| (**1**) | `backButton` | UIButton para fechar a tela. |
-| (**2**) | `closeButton` | UIButton para fechar a tela. |
-| (**3**) | `frontIndicatorView` | View que indica o momento de utilizar a frente do documento. |
-| (**4**) | `backIndicatorView` | View que indica o momento de utilizar o verso do documento. |
-| (**5**) | `instructionLabel` | Texto informativo com orientação da captura, é exibido por apenas alguns segundos. |
-| (**6**) | `cameraPreview` | Nesta view será colocado o preview da câmera. |
-| (**7**) | `cameraVisualizer` | View que determina onde o preview câmera será visível. |
-| (**8**) | `cameraMask` | View que determina onde a camera não será visível. |
-| (**9**) | `captureButton` | Botão para capturar foto. |
-| (**10**) | `previewImageView` | UIImageView onde será exibida a imagem capturada para o usuário confirmar se ficou boa. |
-| (**11**) | `takeNewPictureButton` | Botão para que o usuário capture a foto novamente. |
-| (**12**) | `usePictureButton` | Botão para que o usuário confirme a foto capturada. |
-|          | `displayConfirmationSheet(visibility:animated:)` | Método que indica quando a *view* de confirmação de imagem deve ou não ser mostrada, esse método possui dois parâmetros: <br/> - **visibility** que é um `enum` do tipo ``DocumentscopyConfirmationSheetVisibility`` que indica o estado da *view* de confirmação;<br/> - **animated** que indica quando é recomendado que esse comportamento seja feito com animação. |
-|          | `setFocus(to:animated:)` | Método que indica qual o indicador de face do documento deve estar em foco no momento, esse método possui dois parâmetros: <br/> - **to (*focusElement*)** que é um `enum` do tipo ``DocumentscopyFocusIndicator`` que possui os valores de *frontIndicator* e *backIndicator* que representam a frente e o verso do documento respectivamente;<br/> - **animated** que indica quando é recomendado que esse comportamento seja feito com animação. |
-|          | `setUsePictureButtonTitle(to:)` | Método responsável por atribuir um novo titlulo para o botão de usar foto (`usePictureButton`). |
+| (**1**) | `backButton` | Botão para função voltar da navegação. |
+| (**2**) | `viewCNH` | View que terá a ação de iniciar o fluxo de captura do documento CNH. |
+| (**3**) | `viewRG` | View que terá a ação de iniciar o fluxo de captura do documento RG. |
+
+<br/>
+<img src="Images/dc_instructions.png" width="432" height="396" />
 
 ## Tela de captura das imagens  
 
@@ -127,6 +123,25 @@ private var captureButton: View? = null
 private var activityIndicatorView: View? = null
 private var usePictureButton: View? = null
 private var takeNewPictureButton: View? = null
+
+
+| **Indice** | **Elemento** | **Descrição** |
+|:-----------|:-------------|:--------------|
+| (**1**) | `backButton` | UIButton para fechar a tela. |
+| (**2**) | `closeButton` | UIButton para fechar a tela. |
+| (**3**) | `frontIndicatorView` | View que indica o momento de utilizar a frente do documento. |
+| (**4**) | `backIndicatorView` | View que indica o momento de utilizar o verso do documento. |
+| (**5**) | `instructionLabel` | Texto informativo com orientação da captura, é exibido por apenas alguns segundos. |
+| (**6**) | `cameraPreview` | Nesta view será colocado o preview da câmera. |
+| (**7**) | `cameraVisualizer` | View que determina onde o preview câmera será visível. |
+| (**8**) | `cameraMask` | View que determina onde a camera não será visível. |
+| (**9**) | `captureButton` | Botão para capturar foto. |
+| (**10**) | `previewImageView` | UIImageView onde será exibida a imagem capturada para o usuário confirmar se ficou boa. |
+| (**11**) | `takeNewPictureButton` | Botão para que o usuário capture a foto novamente. |
+| (**12**) | `usePictureButton` | Botão para que o usuário confirme a foto capturada. |
+|          | `displayConfirmationSheet(visibility:animated:)` | Método que indica quando a *view* de confirmação de imagem deve ou não ser mostrada, esse método possui dois parâmetros: <br/> - **visibility** que é um `enum` do tipo ``DocumentscopyConfirmationSheetVisibility`` que indica o estado da *view* de confirmação;<br/> - **animated** que indica quando é recomendado que esse comportamento seja feito com animação. |
+|          | `setFocus(to:animated:)` | Método que indica qual o indicador de face do documento deve estar em foco no momento, esse método possui dois parâmetros: <br/> - **to (*focusElement*)** que é um `enum` do tipo ``DocumentscopyFocusIndicator`` que possui os valores de *frontIndicator* e *backIndicator* que representam a frente e o verso do documento respectivamente;<br/> - **animated** que indica quando é recomendado que esse comportamento seja feito com animação. |
+|          | `setUsePictureButtonTitle(to:)` | Método responsável por atribuir um novo titlulo para o botão de usar foto (`usePictureButton`). |
 
 <br/>
 <div>
