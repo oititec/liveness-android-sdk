@@ -87,7 +87,7 @@ Elementos obrigatórios:
 
 | **Indice** | **Elemento** | **Descrição** |
 |:-----------|:-------------|:--------------|
-| (**1**) | `contentView` |  |
+| (**1**) | `contentView` | ViewGroup Base onde será exibido todo o conteúdo da tela inicial. |
 | (**2**) | `backButton` | Botão para função voltar da navegação. |
 | (**3**) | `cnhPictureButton` | View que terá a ação de iniciar o fluxo de captura do documento CNH. |
 | (**4**) | `rgPictureButton` | View que terá a ação de iniciar o fluxo de captura do documento RG. |
