@@ -59,12 +59,18 @@ Nesta tela o usuário poderá clicar no botão **Tentar novamente**, após a men
 
 ## Instalação e configuração das telas customizáveis
 
-De forma semelhante ao Liveness, a customização das views é realizada por meio da implementação dos layouts (XMLs), os quais devem obrigatoriamente conter alguns elementos visuais com IDs pré-determinados, para o funcionamento correto do processo de documentoscopia. A diferença é que, neste caso, deve-se implementar dois layouts, sendo um para cada tela citada anteriormente.
+De forma semelhante ao Liveness, a customização das views é realizada por meio da implementação dos layouts (XMLs), os quais devem obrigatoriamente conter alguns elementos visuais com IDs pré-determinados, para o funcionamento correto do processo de documentoscopia. A diferença é que, neste caso, deve-se implementar três layouts, sendo um para cada tela citada abaixo.
 
 O componente de Documentoscopia é dividido em três etapas: 
-- Tela inicial, onde o usuário deve escolhar se irá capturar foto da CNH ou do RG, ambas com frente e verso 
-- Tela de captura das imagens, onde o usuário irá fotografar o documento. 
-- Tela de feedback, onde o usuário poderá confirmar se as fotos estão boas, e em caso negativo, poderá capturá-las novamente.
+
+#### Tela inicial 
+- Onde o usuário deve escolhar se irá capturar foto da CNH ou do RG, ambas com frente e verso 
+
+#### Tela de captura das imagens 
+- Onde o usuário irá fotografar o documento. 
+
+#### Tela de feedback 
+- Onde o usuário irá visualizar o retorno pós processamento do documento seja positivo, negativo ou retentativa.
 
 ## Implementação
 
