@@ -59,14 +59,16 @@ Nesta tela o usuário poderá clicar no botão **Tentar novamente**, após a men
 
 ## Instalação e configuração das telas customizáveis
 
-De forma semelhante ao Liveness, a customização das views é realizada por meio da implementação dos layouts (XMLs), os quais devem obrigatoriamente conter alguns elementos visuais com IDs pré-determinados, para o funcionamento correto do processo de documentoscopia. A diferença é que, neste caso, deve-se implementar três layouts, sendo um para cada tela citada abaixo.
+De forma semelhante ao Liveness, a customização das views é realizada por meio da implementação dos layouts (XMLs), os quais devem obrigatoriamente conter alguns elementos visuais com IDs pré-determinados, para o funcionamento correto do processo de documentoscopia. 
+
+A diferença é que, neste caso, deve-se implementar três layouts, sendo um para cada tela citada abaixo.
 
 O componente de Documentoscopia é dividido em três etapas: 
 
 #### Tela inicial 
 - Onde o usuário deve escolhar se irá capturar foto da CNH ou do RG, ambas com frente e verso 
 
-#### Tela de captura das imagens 
+#### Tela de captura do documento
 - Onde o usuário irá fotografar o documento. 
 
 #### Tela de feedback 
@@ -99,23 +101,20 @@ Elementos obrigatórios:
 
 | **Indice** | **Elemento** | **Descrição** |
 |:-----------|:-------------|:--------------|
-| (**1**) | `takeNewPictureButton` |  |
-| (**1**) | `activityIndicatorView` |  |
-| (**1**) | `backButton` | Button para fechar a tela. |
+| (**1**) | `backButton` | Button para voltar de tela. |
 | (**2**) | `closeButton` | Button para fechar a tela. |
-| (**3**) | `titleTextView` |  |
-| (**4**) | `previewContainer` |  |
-| (**5**) | `checkFront` | Texto informativo com orientação da captura, é exibido por apenas alguns segundos. |
-| (**6**) | `checkBack` | Nesta view será colocado o preview da câmera. |
-| (**7**) | `cameraFrameLayout` |  |
-| (**8**) | `cameraFrameBorder` |  |
+| (**3**) | `checkFront` | RadioButton que é ativado quando o usuário está tirando foto da frente do documento. |
+| (**4**) | `checkBack` | RadioButton que é ativado quando o usuário está tirando foto do verso do documento. |
+| (**5**) | `instructionsTextView` | Texto de orientação que será exibido ao usuário |
+| (**6**) | `cameraFrameLayout` | Nesta view será colocado o preview da câmera. |
+| (**7**) | `cameraFrameBorder` | View que determina onde a borda da câmera estará visível. |
+| (**8**) | `previewContainer` | View que determina onde o preview câmera estará visível. |
 | (**9**) | `captureButton` | Botão para capturar foto. |
 | (**10**) | `previewImageView` | ImageView onde será exibida a imagem capturada para o usuário confirmar se ficou boa. |
-| (**11**) | `instructionsTextView` |  |
-| (**12**) | `usePictureButton` | Botão para que o usuário confirme a foto capturada. |
-|          | `bottomSheetTitleTextView` | Método que indica quando a *view* de confirmação de imagem deve ou não ser mostrada, esse método possui dois parâmetros: <br/> - **visibility** que é um `enum` do tipo ``DocumentscopyConfirmationSheetVisibility`` que indica o estado da *view* de confirmação;<br/> - **animated** que indica quando é recomendado que esse comportamento seja feito com animação. |
-|          | `setFocus(to:animated:)` | Método que indica qual o indicador de face do documento deve estar em foco no momento, esse método possui dois parâmetros: <br/> - **to (*focusElement*)** que é um `enum` do tipo ``DocumentscopyFocusIndicator`` que possui os valores de *frontIndicator* e *backIndicator* que representam a frente e o verso do documento respectivamente;<br/> - **animated** que indica quando é recomendado que esse comportamento seja feito com animação. |
-|          | `setUsePictureButtonTitle(to:)` | Método responsável por atribuir um novo titlulo para o botão de usar foto (`usePictureButton`). |
+| (**11**) | `takeNewPictureButton` | Botão para fazer a captura do documento novamente |
+| (**12**) | `usePictureButton` | Botão para capturar foto. |
+| (**12**) | `activityIndicatorView` | Loading exibido enquanto o documento é enviado/processado. |
+| (**13**) | `titleTextView` | Título do box de confirmação que será exibido ao usuário pós captura de imagem. |
 
 <br/>
 <div>
@@ -124,22 +123,17 @@ Elementos obrigatórios:
 <div/>
     
 
-## 3. Tela de processamento do documento
+## Tela de processamento do documento
+    
+**DocumentscopyActivity.PARAM_CUSTOM_FEEDBACK_FRAGMENT**
 
 Elementos obrigatórios:
-
     
 | **Indice** | **Elemento** | **Descrição** |
 |:-----------|:-------------|:--------------|
-| (**1**) | `successView` |  |
-| (**2**) | `failureView` |  |
-| (**3**) | `failureTextView` | Button para fechar a tela. |
-| (**4**) | `failureCloseButton` | Button para fechar a tela. |
+| (**1**) | `successView` | ViewGroup que será exibida em caso positivo. |
+| (**2**) | `failureView` |  ViewGroup que será exibida em caso negativo. |
+| (**4**) | `failureCloseButton` | Botão para fechar a tela. |
 
 ---
-    
-## Observações
-
-No projeto Sample, neste mesmo repositório, encontra-se um exemplo de implementação.
-
 
