@@ -5,14 +5,16 @@ Guia de uso e integração da Documentoscopia para Android.
 ### Iniciando a Documentoscopia
 
 1. Instancie um Intent para a classe `DocumentscopyActivity`, com os seguintes extras:
-- *DocumentscopyActivity.PARAM_ENDPOINT*: URL apontando para o ambiente desejado.
-- *DocumentscopyActivity.PARAM_APP_KEY*: App Key (recebida previamente).
-- *DocumentscopyActivity.PARAM_DEBUG_ON (opcional)*: booleano para ajudar a depurar. Faz com que mensagens de log sejam exibidas na tela através de `Toasts`.
+
 ```kotlin
 val intent = Intent(this, DocumentscopyActivity::class.java).apply {
     putExtra(DocumentscopyActivity.PARAM_ENDPOINT, ENDPOINT)
     putExtra(DocumentscopyActivity.PARAM_APP_KEY, APP_KEY)
-    putExtra(FaceCaptchaActivity.PARAM_DEBUG_ON, false) // Passar true para mostrar logs na tela
+    putExtra(FaceCaptchaActivity.PARAM_DEBUG_ON, false) 
+    putExtra(DocumentscopyActivity.PARAM_SHOW_FEEDBACK, true)
+    putExtra(DocumentscopyActivity.PARAM_CUSTOM_HOME_FRAGMENT, R.layout.fragment_home_custom)
+    putExtra(DocumentscopyActivity.PARAM_CUSTOM_CAMERA_FRAGMENT, R.layout.fragment_camera_custom)
+    putExtra(DocumentscopyActivity.PARAM_CUSTOM_FEEDBACK_FRAGMENT, R.layout.fragment_doc_feedback_custom)
 }
 ```
 
@@ -20,6 +22,19 @@ val intent = Intent(this, DocumentscopyActivity::class.java).apply {
 ```kotlin
 startActivityForResult(intent, DOCUMENTSCOPY_RESULT_REQUEST)
 ```
+### Descrição dos parâmetros
+
+##### Obs: Os parâmetros obrigatórios estão em negrito.
+
+| **Indice** | **Elemento** | **Descrição** |
+|:-----------|:-------------|:--------------|
+| (**1**) | **`PARAM_ENDPOINT`** |  **BaseUrl que será utilizado pelo SDK (Ambiente desejado).**|
+| (**2**) | **`PARAM_APP_KEY`** | **Chave necessária para iniciar o fluxo do SDK (gerada anteriormente).** |
+| (**3**) | `PARAM_DEBUG_ON` | Exibe os logs em tela caso true, usado apenas durante o Desenvolvimento. |
+| (**4**) | `PARAM_SHOW_FEEDBACK` | Define se as telas de Feedback serão exibidas ao final do processamento. |
+| (**5**) | `PARAM_CUSTOM_HOME_FRAGMENT` | Caso queira customizar a tela inicial, deve-se enviar um XML nesse parâmetro. |
+| (**6**) | `PARAM_CUSTOM_CAMERA_FRAGMENT` | Caso queira customizar a tela de captura das imagens, deve-se enviar um XML nesse parâmetro. |
+| (**7**) | `PARAM_CUSTOM_FEEDBACK_FRAGMENT` | Caso queira customizar a tela de feedback, deve-se enviar um XML nesse parâmetro. |
 
 ### Customização
 
