@@ -68,18 +68,11 @@ O componente de Documentoscopia é dividido em três etapas: 
 
 ## Implementação
 
-val intent = Intent(this, DocumentscopyActivity::class.java).apply {
-            putExtra(DocumentscopyActivity.PARAM_ENDPOINT, ENDPOINT)
-            putExtra(DocumentscopyActivity.PARAM_APP_KEY, appKey)
-            putExtra(DocumentscopyActivity.PARAM_DEBUG_ON, false)
-            putExtra(DocumentscopyActivity.PARAM_CUSTOM_HOME_FRAGMENT, R.layout.fragment_home_custom)
-            putExtra(DocumentscopyActivity.PARAM_CUSTOM_CAMERA_FRAGMENT, R.layout.fragment_camera_custom)
-            putExtra(DocumentscopyActivity.PARAM_CUSTOM_FEEDBACK_FRAGMENT, R.layout.fragment_doc_feedback_custom)
-        }
+> **Nota: [Clique aqui](https://github.com/oititec/liveness-android-sdk/blob/main/Documentation/Documentscopy-Usage.md) para visualizar um exemplo de implementação.**
 
 ## Tela Inicial  
 
-DocumentscopyActivity.PARAM_CUSTOM_HOME_FRAGMENT
+**DocumentscopyActivity.PARAM_CUSTOM_HOME_FRAGMENT**
 
 Elementos obrigatórios:
 
@@ -94,7 +87,7 @@ Elementos obrigatórios:
 
 ## Tela de captura das imagens  
 
-DocumentscopyActivity.PARAM_CUSTOM_CAMERA_FRAGMENT
+**DocumentscopyActivity.PARAM_CUSTOM_CAMERA_FRAGMENT**
 
 Elementos obrigatórios:
 
@@ -141,6 +134,6 @@ Elementos obrigatórios:
     
 ## Observações
 
-No projeto Sample, neste mesmo repositório, encontra-se um exemplo de implementação. Recomenda-se usar como ponto de partida as views inclusas neste sample, modificando-as de acordo com a necessidade.
+No projeto Sample, neste mesmo repositório, encontra-se um exemplo de implementação.
 
 
