@@ -16,59 +16,9 @@ Abaixo, estão descritos os processos de: instalação, uso, guias de migração
 
 ##  Instalação
 
-Para efetuar a instalação do liveness, seja **2D** ou **3D**, é necessário baixar e importar as dependências conforme exemplos abaixo:
+As instruções de instalação e atualização do Liveness **2D, 3D** ou **Documentoscopia**, podem ser acessadas pelo link abaixo:
 
-> **Nota 1:** É necessário baixar e colar o(s) artefato(s) dentro da pasta **libs/** no projeto.
-
-> **Nota 2:** Não é necessário baixar e importar ambas as bibliotecas, somente aquela que for utilizada, seja **2D** ou **3D**.
-
-###  Liveness 2D/Facecaptcha
-
-No arquivo `build.gradle` do projeto, adicione a seguinte configuração:
-
-```gradle
-
-repositories {
-    flatDir { dirs 'libs/' }
-}
-
-```
-
-No arquivo `build.gradle` do módulo/app, adicione as seguintes dependências:
-
-```gradle
-dependencies {
-   implementation files('libs/liveness-sdk-2.3.1.aar')
-}
-```
-> **Nota: [clique aqui](https://github.com/oititec/android-oiti-versions) para baixar os artefatos.**
-
-### Liveness 3D
-
-No arquivo `build.gradle` do projeto, adicione a seguinte configuração:
-
-```gradle
-
-repositories {
-    flatDir { dirs 'libs/' }
-}
-
-```
-
-No arquivo `build.gradle` do módulo/app, adicione as seguintes dependências:
-
-```gradle
- dependencies {
-   implementation files('libs/facetec-sdk-9.4.23.aar')
-   implementation files('libs/liveness3d-release.aar')
- }
- ```
-
-> **Nota: [clique aqui](https://github.com/oititec/android-oiti-versions) para baixar os artefatos.**
-
-####  Processo de atualização
-
-> **A cada atualização, novas regras de segurança são adicionadas ao SDK, por esse motivo é altamente recomendável que o processo de atualização seja algo constante. Recomendamos ao menos uma atualização a cada 30 dias.**
+- [Guia de instalação e atualização](https://github.com/oititec/android-oiti-versions).
 
 ##  Uso
 
