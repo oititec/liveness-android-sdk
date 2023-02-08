@@ -1,6 +1,6 @@
 #  Certiface para Android
 
-Neste repositório encontre as documentações para **Android** sobre o **Liveness FaceCaptcha**, **Liveness 3D** e **Documentoscopia**.
+Neste repositório encontre as documentações para **Android** sobre o **Liveness 2D/FaceCaptcha**, **Liveness 3D** e **Documentoscopia**.
 
 
 
@@ -13,6 +13,10 @@ Os tipos de Liveness serão apresentados na demonstração do serviço e a escol
 **Para cada tipo de Liveness, são apresentados propriedades técnicas específicas**. Assim, a pessoa desenvolvedora deve executar os comandos pertencentes ao tipo do serviço contratado.
 
 Abaixo, estão descritos os processos de: instalação, uso, guias de migração e outros documentos. Esses processos integram os projetos Liveness2D/FaceCaptcha e Liveness 3D.
+
+>⚠️ **Para conhecer mais sobre Liveness, consulte [este link.](https://certifaceid.readme.io/docs/liveness-detection-vs-atualizada)**
+
+>⚠️ **Para conhecer mais sobre Documentoscopia, consulte [este link.](https://certifaceid.readme.io/docs/documentoscopia-digital)**
 
 ##  Instalação
 
@@ -64,5 +68,3 @@ As instruções de uso, integração e customização da **Documentoscopia** pod
 - [1.5.0](Documentation/Migration-Guide-1.5.0.md)
 - [1.4.1](Documentation/Migration-Guide-1.4.1.md)
 - [1.4.0](Documentation/Migration-Guide-1.4.0.md)
-
->⚠️ **Para conhecer mais sobre Liveness, consulte [este link.](https://certifaceid.readme.io/docs/liveness-detection-vs-atualizada)**
