@@ -139,7 +139,7 @@ private fun onLiveness3DResultCancelled(data: Intent?) {
 }
 ```
 
-**A partir da versão 5.3 os retornos serão apenas os listados abaixo: **
+**A partir da versão 5.3 os retornos serão apenas os listados abaixo:** 
 
 `Liveness3DErrorMessage` pode assumir os seguintes valores:
 
