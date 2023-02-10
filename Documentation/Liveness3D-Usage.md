@@ -20,7 +20,7 @@ enum class ENVIRONMENT3D {
 #### Descrição dos parâmetros
 - **appKey** : Chave gerada para execução do liveness.
 - **environment** : Ambiente que será executado o SDK, o default é **HML**.
-- **liveness3DTheme** Objeto utilizado para customizar os elementos visuais no liveness.
+- **liveness3DTheme** : Objeto utilizado para customizar os elementos visuais no liveness.
 
 Detalhes de como customizar o Liveness3DTheme são encontrados [neste link](Liveness3D-Liveness3DTheme.md).
 
