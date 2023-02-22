@@ -10,21 +10,7 @@ Abaixo, estão mapeadas as propriedades para customização do `Liveness3DTheme`
     val guidanceCustomizationHeaderFont: Typeface? = null,
     val guidanceCustomizationSubtextFont: Typeface? = null,
     
-    //Ready Screen
-    val guidanceCustomizationReadyScreenHeaderFont: Typeface? = null,
-    val guidanceCustomizationReadyScreenHeaderTextColor: Int? = 0,
-    val guidanceCustomizationReadyScreenHeaderAttributedString: String? = "",
-    val guidanceCustomizationReadyScreenSubtextFont: Typeface? = null,
-    val guidanceCustomizationReadyScreenSubtextTextColor: Int? = 0,
-    val guidanceCustomizationReadyScreenSubtextAttributedString: String? = "",
-    
-    //Retry Screen
-    val guidanceCustomizationRetryScreenHeaderFont: Typeface? = null,
-    val guidanceCustomizationRetryScreenHeaderTextColor: Int? = 0,
-    val guidanceCustomizationRetryScreenHeaderAttributedString: String = "",
-    val guidanceCustomizationRetryScreenSubtextFont: Typeface? = null,
-    val guidanceCustomizationRetryScreenSubtextTextColor: Int? = 0,
-    val guidanceCustomizationRetryScreenSubtextAttributedString: String? = "",
+    //Buttons
     val guidanceCustomizationButtonFont: Typeface? = null,
     val guidanceCustomizationButtonTextNormalColor: Int? = -1,
     val guidanceCustomizationButtonBackgroundNormalColor: Int? = Color.parseColor("#417FB2"),
@@ -35,9 +21,25 @@ Abaixo, estão mapeadas as propriedades para customização do `Liveness3DTheme`
     val guidanceCustomizationButtonBorderColor: Int? = 0,
     val guidanceCustomizationButtonBorderWidth: Int? = -1,
     val guidanceCustomizationButtonCornerRadius: Int? = -1,
+    
+    //Ready Screen
+    val guidanceCustomizationReadyScreenHeaderFont: Typeface? = null,
+    val guidanceCustomizationReadyScreenHeaderTextColor: Int? = 0,
+    val guidanceCustomizationReadyScreenHeaderAttributedString: String? = "",
+    val guidanceCustomizationReadyScreenSubtextFont: Typeface? = null,
+    val guidanceCustomizationReadyScreenSubtextTextColor: Int? = 0,
+    val guidanceCustomizationReadyScreenSubtextAttributedString: String? = "",
     val guidanceCustomizationReadyScreenOvalFillColor: Int? = Color.parseColor("#00FFFFFF"),
     val guidanceCustomizationReadyScreenTextBackgroundColor: Int? = -1,
     val guidanceCustomizationReadyScreenTextBackgroundCornerRadius: Int? = -1,
+    
+    //Retry Screen
+    val guidanceCustomizationRetryScreenHeaderFont: Typeface? = null,
+    val guidanceCustomizationRetryScreenHeaderTextColor: Int? = 0,
+    val guidanceCustomizationRetryScreenHeaderAttributedString: String = "",
+    val guidanceCustomizationRetryScreenSubtextFont: Typeface? = null,
+    val guidanceCustomizationRetryScreenSubtextTextColor: Int? = 0,
+    val guidanceCustomizationRetryScreenSubtextAttributedString: String? = "",
     val guidanceCustomizationRetryScreenImageBorderColor: Int? = Color.parseColor("#417FB2"),
     val guidanceCustomizationRetryScreenImageBorderWidth: Int? = -1,
     val guidanceCustomizationRetryScreenImageCornerRadius: Int? = -1,
