@@ -145,3 +145,80 @@ Abaixo, estão mapeadas as propriedades para customização do `Liveness3DTheme`
 | **Atributo**                         | **Tipo**             | **Descrição**                                                              |
 | :----------------------------------- | :------------------- | :------------------------------------------------------------------------- |
 | resultScreenOverrideSuccessMessage | String              |                            | 
+
+
+# Customização dos textos por objeto
+
+## Nova forma de customização
+Agora a activity `Liveness3DActivity` possui um novo parâmetro (`PARAM_TEXTS`) que recebe um *HashMap* tendo como chave o tipo `Liveness3DTextKey` e como valor uma *string*.
+Dessa forma a customização de textos da FaceTec não é feita mais pelo arquivo **strings.xml**.
+
+```kotlin
+val texts = hashMapOf<Liveness3DTextKey, String>(
+    Liveness3DTextKey.READY_HEADER_1 to "Vamos Iniciar",
+    Liveness3DTextKey.READY_HEADER_2 to "a jornada",
+    Liveness3DTextKey.READY_MESSAGE_1 to "Instruções de como fazer",
+    Liveness3DTextKey.READY_MESSAGE_2 to "o desafio do Liveness 3D.",
+)
+
+startActivityForResult?.launch(Intent(this, Liveness3DActivity::class.java).apply {
+    putExtra(Liveness3DActivity.PARAM_LIVENESS3D_USER, liveness3DUser)
+    putExtra(Liveness3DActivity.PARAM_TEXTS, texts)
+})
+```
+
+## Novas tags
+
+### Ready Screen
+
+| **Novo identificador**    | **Antiga tag do arquivo XML**         |
+| :------------------------ | :------------------------------------ |
+| READY_HEADER_1            | FaceTec_instructions_header_ready_1   |
+| READY_HEADER_2            | FaceTec_instructions_header_ready_2   |
+| READY_MESSAGE_1           | FaceTec_instructions_message_ready_1  |
+| READY_MESSAGE_2           | FaceTec_instructions_message_ready_2  |
+| READY_BUTTON              | FaceTec_action_im_ready               |
+
+### Retry Screen
+
+| **Novo identificador**    | **Antiga tag do arquivo XML**        |
+| :------------------------ | :----------------------------------- |
+| RETRY_HEADER              | FaceTec_retry_header                 |
+| RETRY_SUBHEADER           | FaceTec_retry_subheader_message      |
+| RETRY_MESSAGE_SMILE       | FaceTec_retry_instruction_message_1  |
+| RETRY_MESSAGE_LIGHTING    | FaceTec_retry_instruction_message_2  |
+| RETRY_MESSAGE_CONTRAST    | FaceTec_retry_instruction_message_3  |
+| RETRY_YOUR_PICTURE        | FaceTec_retry_your_image_label       |
+| RETRY_IDEAL_PICTURE       | FaceTec_retry_ideal_image_label      |
+| RETRY_BUTTON              | FaceTec_action_try_again             |
+
+### Result Screen
+
+| **Novo identificador** | **Antiga tag do arquivo XML**            |
+| :--------------------- | :--------------------------------------- |
+| RESULT_UPLOAD_MESSAGE  | FaceTec_result_facescan_upload_message   |
+| RESULT_SUCCESS_MESSAGE | FaceTec_result_success_message           |
+
+### Feedback
+
+| **Novo identificador**                    | **Antiga tag do arquivo XML**                     |
+| :---------------------------------------- | :------------------------------------------------ |
+| FEEDBACK_CENTER_FACE                      | FaceTec_feedback_center_face                      |
+| FEEDBACK_FACE_NOT_FOUND                   | FaceTec_feedback_face_not_found                   |
+| FEEDBACK_FACE_NOT_LOOKING_STRAIGHT_AHEAD  | FaceTec_feedback_face_not_looking_straight_ahead  |
+| FEEDBACK_FACE_NOT_UPRIGHT                 | FaceTec_feedback_face_not_upright                 |
+| FEEDBACK_HOLD_STEADY                      | FaceTec_feedback_hold_steady                      |
+| FEEDBACK_MOVE_PHONE_AWAY                  | FaceTec_feedback_move_phone_away                  |
+| FEEDBACK_MOVE_PHONE_CLOSER                | FaceTec_feedback_move_phone_closer                |
+| FEEDBACK_MOVE_PHONE_TO_EYE_LEVEL          | FaceTec_feedback_move_phone_to_eye_level          |
+| FEEDBACK_USE_EVEN_LIGHTING                | FaceTec_feedback_use_even_lighting                |
+| FEEDBACK_FRAME_YOUR_FACE                  | FaceTec_presession_frame_your_face                |
+| FEEDBACK_LOOK_STRAIGHT_IN_OVAL            | FaceTec_presession_position_face_straight_in_oval |
+| FEEDBACK_HOLD_STEADY_1                    | FaceTec_presession_hold_steady_1                  |
+| FEEDBACK_HOLD_STEADY_2                    | FaceTec_presession_hold_steady_2                  |
+| FEEDBACK_HOLD_STEADY_3                    | FaceTec_presession_hold_steady_3                  |
+| FEEDBACK_REMOVE_DARK_GLASSES              | FaceTec_presession_remove_dark_glasses            |
+| FEEDBACK_NEUTRAL_EXPRESSION               | FaceTec_presession_neutral_expression             |
+| FEEDBACK_EYES_STRAIGHT_AHEAD              | FaceTec_presession_eyes_straight_ahead            |
+| FEEDBACK_CONDITIONS_TOO_BRIGHT            | FaceTec_presession_conditions_too_bright          |
+| FEEDBACK_BRIGHTEN_YOUR_ENVIRONMENT        | FaceTec_presession_brighten_your_environment      |
