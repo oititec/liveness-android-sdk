@@ -18,7 +18,7 @@ Abaixo, estão descritos os processos de: instalação, uso, guias de migração
 
 >⚠️ **Para conhecer mais sobre Documentoscopia, consulte [este link.](https://certifaceid.readme.io/docs/documentoscopia-digital)**
 
-##  Instalação
+##  Instalação e Atualização
 
 As instruções de instalação e atualização do Liveness **2D, 3D** ou **Documentoscopia**, podem ser acessadas pelo link abaixo:
 
