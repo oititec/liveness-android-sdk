@@ -20,7 +20,7 @@ Abaixo, estão descritos os processos de: instalação, uso, guias de migração
 
 ##  Instalação e Atualização
 
-As instruções de instalação e atualização do Liveness **2D, 3D** ou **Documentoscopia**, podem ser acessadas pelo link abaixo:
+>⚠️ As instruções de instalação, atualização, pré-requisitos e histórico de versões do Liveness **2D, 3D** ou **Documentoscopia**, podem ser acessadas pelo link abaixo:
 
 - [Guia de instalação e atualização](https://github.com/oititec/android-oiti-versions).
 
