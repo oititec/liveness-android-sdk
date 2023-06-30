@@ -14,7 +14,7 @@ Os tipos de Liveness serão apresentados na demonstração do serviço e a escol
 
 Abaixo, estão descritos os processos de: instalação, uso, guias de migração e outros documentos. Esses processos integram os projetos Liveness2D/FaceCaptcha e Liveness 3D.
 
->**⚠️Importante**
+>**⚠️ Importante**
 ><br/>Para conhecer o **Hub de Liveness:** [consulte este link.](https://devcenter.certiface.io/docs/hub-de-liveness)
 ><br/>Para conhecer o **Doc Core:** [consulte este link.](https://devcenter.certiface.io/docs/doc-core)
 
