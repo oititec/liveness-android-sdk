@@ -60,7 +60,7 @@ As instruções de uso, integração e customização da **Documentoscopia** pod
 
 ###  Changelog
 
-- As novidades das versões podem ser acessadas [neste link](https://github.com/oititec/android-oiti-versions/blob/master/Liveness2D/Documentation/Changelog.MD).
+- Acompanhe as novidades das versões do [Changelog Liveness 2D](https://github.com/oititec/android-oiti-versions/blob/master/Liveness2D/Documentation/Changelog.MD) e [Changelog Liveness 3D](https://github.com/oititec/android-oiti-versions/blob/master/Liveness3D/Documentation/Changelog.MD).
 
 ##  Guias de migração
 
