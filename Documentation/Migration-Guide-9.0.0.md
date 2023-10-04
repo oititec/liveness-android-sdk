@@ -4,7 +4,7 @@
 
 ### Atualizações
 
-- Atualizado PARAM_FONTS agora pode receber tanto um hashmap com o path da fonte quanto um hashmap contendo o resource ID.
+- Atualizado `PARAM_FONTS` agora pode receber tanto um hashmap com o path da fonte quanto um hashmap contendo o resource ID.
 - `PARAM_FONTS_NEW_API` removido.
 - Removida validação onde era possivel implementar o `PARAM_FONTS_NEW_API` somente com api superiores a 26 agora presente no `PARAM_FONTS`.
 
