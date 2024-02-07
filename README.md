@@ -1,67 +1,30 @@
-<p align="center">
- <img src="Documentation/Images/OitiHeader.png"/>
-</p>
+<IMG  src="https://github.com/oititec/liveness-android-sdk/blob/main/Documentation/Images/OitiHeader.png?raw=true"  alt="OitiHeader.png"/>
 
-# Certiface para Android
+# Oiti - CertiFace para Android
 
-Neste repositório encontre as documentações para **Android** sobre o **Liveness 2D/FaceCaptcha**, **Liveness 3D** e **Documentoscopia**.
 
-## Sobre
+> 🚧 Este é um repositório legado. Como parte de nossos esforços, reorganizamos nossos recursos técnicos. 
+**Para acessar as informações mais recentes visite o [novo repositório](https://github.com/oititec/android-oiti-versions).** 
+Este repositório permancerá ativo, mas não receberá atualizações.
 
-O Liveness, ou Prova de Vida, pode ser executado através de SDK único que reúne os tipos: _Liveness FaceCaptcha_ e _Liveness 3D_.
 
-Os tipos de Liveness serão apresentados na demonstração do serviço e a escolha de um deles deve ser efetuada mediante contratação. Um diagnóstico será efetuado pelo time comercial, responsável por ofertar a melhor experiência para o cliente, considerando seu o modelo de negócio e o comportamento de seus usuários.
+Visite o sumário abaixo e conheça sobre as documentações de uso e integração, customização e releases notes de Liveness 2D, Liveness 3D e Documentoscopia para Android.
 
-**Para cada tipo de Liveness, são apresentados propriedades técnicas específicas**. Assim, a pessoa desenvolvedora deve executar os comandos pertencentes ao tipo do serviço contratado.
 
-Abaixo, estão descritos os processos de: instalação, uso, guias de migração e outros documentos. Esses processos integram os projetos Liveness2D/FaceCaptcha e Liveness 3D.
+**Simplificamos nossos guias de integração e de customização do nosso SDK Android:**
 
-> **⚠️ Importante** ><br/>Para conhecer o **Hub de Liveness:** [consulte este link.](https://devcenter.certiface.io/docs/hub-de-liveness) ><br/>Para conhecer o **Doc Core:** [consulte este link.](https://devcenter.certiface.io/docs/doc-core)
+- [Guias de Instalação](https://devcenter.certiface.io/docs/guia-de-instalacao-android)
+- [Guia de Uso e Integração](https://devcenter.certiface.io/docs/guia-de-uso-e-integracao-android)
+- [Guia de Tratamento de Retornos](https://devcenter.certiface.io/docs/guia-de-tratamento-de-retorno-android)
+- [Guia de Customização](https://devcenter.certiface.io/docs/liveness3d-android)
 
-## Instalação e Atualização
 
-> ⚠️ As instruções de instalação, atualização, pré-requisitos e histórico de versões do Liveness **2D, 3D** ou **Documentoscopia**, podem ser acessadas pelo link abaixo:
+---
 
-- [Guia de instalação e atualização](https://github.com/oititec/android-oiti-versions).
+### Saiba mais
 
-## Uso
+- Conhecer as **ferramentas de prevenção à fraude** e suas funcionalidades: [consulte este link](https://devcenter.certiface.io/docs/certiface-funcionalidades).
 
-### Liveness 2D/Facecaptcha
+- Acessar quadro de **compatibilidade de sistemas e drivers**: [consulte este link](https://devcenter.certiface.io/docs/compatibilidade-dos-servicos).
 
-As instruções de uso, integração e implementação do **Liveness FaceCaptcha** podem ser acessadas nos links abaixo:
-
-- [Guia de uso e integração](Documentation/Liveness-Usage.md);
-- [Guia de implementação de view customizada](Documentation/Liveness-CustomView.md).
-
-### Liveness 3D
-
-As instruções de uso, integração, implementação e customização do **Liveness 3D** podem ser acessadas nos links abaixo:
-
-- [Guia de uso e integração](Documentation/Liveness3D-Usage.md);
-- [Guia de implementação de view customizada](Documentation/Liveness3D-CustomView.md);
-- [Guia de customização do Liveness3DTheme](Documentation/Liveness3D-Liveness3DTheme.md);
-- [Exemplo de Projeto: criação e inicialização](https://github.com/oititec/android-liveness3d-sample).
-
-### Documentoscopia
-
-As instruções de uso, integração e customização da **Documentoscopia** podem ser acessadas nos links abaixo:
-
-- [Guia de uso e integração](Documentation/Documentscopy-Usage.md);
-- [Guia de customização de view customizada](Documentation/Documentscopy-CustomView.md).
-
-## Outros Documentos
-
-### Sample
-
-- Um exemplo de implementação pode ser encontrado no projeto [SampleFaceCaptcha](https://github.com/oititec/liveness-android-sdk/tree/main/FaceCaptchaSample "SampleFaceCaptcha"), neste mesmo repositório.
-
-### Changelog
-
-- Acompanhe as novidades das versões do [Changelog Liveness 2D](https://github.com/oititec/android-oiti-versions/blob/master/Liveness2D/Documentation/Changelog.MD) e [Changelog Liveness 3D](https://github.com/oititec/android-oiti-versions/blob/master/Liveness3D/Documentation/Changelog.MD).
-
-## Guias de migração
-
-- [2.0.0](Documentation/Migration-Guide-2.0.0.md)
-- [1.5.0](Documentation/Migration-Guide-1.5.0.md)
-- [1.4.1](Documentation/Migration-Guide-1.4.1.md)
-- [1.4.0](Documentation/Migration-Guide-1.4.0.md)
+- Entrar em contato com o **atendimento Oiti**: [consulte este link](https://devcenter.certiface.io/docs/portal-de-atendimento).
