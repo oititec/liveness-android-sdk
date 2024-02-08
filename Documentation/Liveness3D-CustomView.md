@@ -1,3 +1,7 @@
+> 🚧 Este é um repositório legado. Como parte de nossos esforços, reorganizamos nossos recursos técnicos. 
+**Para acessar as informações mais recentes visite o [novo repositório](https://github.com/oititec/android-oiti-versions).** 
+Este repositório permancerá ativo, mas não receberá atualizações.
+
 # Guia de Implementação de View Customizada do Liveness 3D
 
 > Versão Beta.

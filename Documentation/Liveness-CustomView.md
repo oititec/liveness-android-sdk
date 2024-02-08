@@ -1,3 +1,7 @@
+> 🚧 Este é um repositório legado. Como parte de nossos esforços, reorganizamos nossos recursos técnicos. 
+**Para acessar as informações mais recentes visite o [novo repositório](https://github.com/oititec/android-oiti-versions).** 
+Este repositório permancerá ativo, mas não receberá atualizações.
+
 # Liveness - Guia de implementação de view customizada
 
 A partir da versão 2.0.0, o SDK Liveness permite que a forma de visualização seja completamente customizada.
